@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useParams, Link, useSearchParams  } from "react-router-dom";
 import { jobPostingsMock } from "../mocks/jopPostings";
+import CompanyMap from "../components/CompanyMap";
 
 export default function JobDetailPage() {
   const { id } = useParams();
@@ -90,15 +91,11 @@ const setTab = (nextTab) => {
       </div>
       {/* Company Location */}
 <div style={styles.section}>
-  <h3 style={styles.sectionTitle}>회사 위치</h3>
-  <div style={styles.mapPlaceholder}>
-    <p style={styles.mapText}>
-      📍 {job.companyLocation}
-    </p>
-    <p style={styles.mapHint}>
-      지도는 추후 제공될 예정입니다.
-    </p>
-  </div>
+ <h3 style={styles.sectionTitle}>회사 위치</h3>
+<p style={styles.muted}>{job.companyAddress}</p>
+<div style={{ marginTop: 10 }}>
+  <CompanyMap address={job.companyAddress} />
+</div>
 </div>
 
     </div>
