@@ -88,6 +88,19 @@ const setTab = (nextTab) => {
           </>
         )}
       </div>
+      {/* Company Location */}
+<div style={styles.section}>
+  <h3 style={styles.sectionTitle}>회사 위치</h3>
+  <div style={styles.mapPlaceholder}>
+    <p style={styles.mapText}>
+      📍 {job.companyLocation}
+    </p>
+    <p style={styles.mapHint}>
+      지도는 추후 제공될 예정입니다.
+    </p>
+  </div>
+</div>
+
     </div>
   );
 }
@@ -181,4 +194,28 @@ const styles = {
     color: "#666",
     fontSize: 14,
   },
+
+  section: {
+  marginTop: 20,
+},
+sectionTitle: {
+  margin: "0 0 8px",
+  fontSize: 14,
+},
+mapPlaceholder: {
+  border: "1px dashed #ddd",
+  borderRadius: 12,
+  padding: 16,
+  backgroundColor: "#fafafa",
+},
+mapText: {
+  margin: 0,
+  fontSize: 14,
+},
+mapHint: {
+  marginTop: 6,
+  fontSize: 12,
+  color: "#888",
+},
+
 };

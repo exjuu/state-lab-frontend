@@ -3,7 +3,7 @@ export const jobPostingsMock = [
     id: 1,
     companyName: "Example Corp",
     jobTitle: "Backend Engineer",
-    location: "Seoul",
+    companyLocation: "Seoul",
     careerLevel: "Mid",
     techStack: ["Java", "Spring", "AWS"],
     summary:
