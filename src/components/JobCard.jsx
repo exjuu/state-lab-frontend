@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 export default function JobCard({ job }) {
+    const navigate = useNavigate();
+
   return (
-    <div style={styles.card}>
+     <div
+      style={styles.card}
+      onClick={() => navigate(`/jobs/${job.id}`)}
+    >
       <div style={styles.header}>
         <h3 style={styles.title}>{job.jobTitle}</h3>
         <span style={styles.company}>{job.companyName}</span>
